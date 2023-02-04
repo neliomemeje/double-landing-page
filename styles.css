@@ -1,0 +1,76 @@
+
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-family: Impact, sans-serif;
+}
+
+h1{
+  color: aliceblue;
+  font-size: 50px;
+  letter-spacing: 3px;
+  backdrop-filter: brightness(.5);
+  padding: 10px 0;
+}
+
+.split{
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+.split.left{
+  position: absolute;
+  left: 0;
+  background-color: pink;
+  background-image: url("https://cdn.shopify.com/s/files/1/0593/0480/4531/products/iPhone13PROMAX1_COLOR-ALPINEGREEN_CAPACITY-ALL_576x.png?v=1663842098");
+  background-size: cover;
+}
+
+.split.right{
+  position: absolute;
+  right: 0;
+  background-color: lightblue;
+  background-image: url("https://i.expansys.net/img/p/330001/samsung-galaxy-s21-ultra-5g-dual-sim-sm-g9980.jpg");
+  background-size: cover;
+}
+
+button{
+  font-size: 2rem;
+  padding: 20px 40px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  transition: 1s background-color;
+  white-space: nowrap ;
+}
+
+button:hover{
+  background-color: white;
+  border: white;
+  color: black;
+}
+
+.active-left .left{
+  width: 75%;
+}
+
+.active-left .right{
+  width: 25%;
+}
+
+.active-right .right{
+  width: 75%;
+}
+
+.active-right .left{
+  width: 25%;
+}
+
+.left, .right {
+  transition: 2s width ease-in-out;
+}
